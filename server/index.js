@@ -20,6 +20,8 @@ const PORT =  process.env.PORT || 5000
 
 
 //To get access to the name value pairs send in the message Body of POST Request.
+// POST HTTP request .... name value pairs HEADER body --- name-value pairs
+// express that we want the body
  app.use(express.urlencoded({extended:true}))
  app.use(express.json())
 
@@ -27,16 +29,24 @@ const PORT =  process.env.PORT || 5000
 //Middleware Serving Static Pages from client directory
 // second parameter is an configuration object of how we want
 // the static file server to run.
+// GET request
 app.use(express.static(path.join(__dirname, "../client"), {extensions: ["html", 'htm']})
 );
 
  
  // Routing Middleware.  
  // login route.
+ // app.get(), app.post(), app.delete()
  app.post('/login', (req, res)=>{
    console.log(req.body)
-   res.send("trying to login")
+   // res.send() text
+   // res.json() json
+   // res.sendFile() path to file
+   // res.redirect() file/ssr
+   // res.render() ssr template
+   res.sendFile(path.join(__dirname, '../client/dashboard.html'))
  })
+
 
 // Final Middleware 
 // Catch all for any request not handled while express was
