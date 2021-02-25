@@ -1,31 +1,56 @@
 /* 
-    NODE build your files with JS first
-    - get them working, test one the command line
-    - add the commonjs exports to the function
-
-    pass email and the password auth with the user.json
-    read the user.json
-    array methods - map, filter, find, reduce, forEach
-    arrays of objects - JSON XML SSR built on the server at runtimer
-
-    auth
-    email ==> email from the form
-    password ==> password sent from form
-    POST login route
-    {
-        req.body.email
-        req.body.password
-    }
+  Login Service Will Authenticate an email and password
+  return a true or false response.
+  false returns will keep users on the login page with errors
+  true will redirect user to the dashboard.html
 */
-
-
 const fileService = require('./fileService')
-//console.log(fileService)
+ 
+// common js module  import === require
+// export import es modules  Browser...
+// exports or module.exports  requre commonjs  NODE (BUNDLER RUN BROWSER)
+exports.authenticate = (credential)=>{
+ 
+   const {email, password} = {...credential}
+   const users = fileService.getFileContents('../data/users.json');
+   // flush the authentication
+   
+ const authUser =  users.reduce((authObj, user)=>{
+     
+    if(user.email === email){
+      authObj.validEmail = true;
+    }else{
+       // errorObj
+    }
 
-const authenticate = (credentials)=>{
-    const {email, password} = {...credentials}
-    const users = fileService.getFileContents('../data/users.json')
-    console.log(users)
+    if(user.password === password){
+      authObj.validPassword = true;
+    }else{
+      // passwordError authObj.passwordError = "something"
+    }
+
+    if(authObj.validEmail===true && authObj.validPassword===true){
+        authObj.user = user;
+    }
+         
+    return authObj
+
+   }, {validEmail:false, validPassword:false, user:null})
+
+    // ternary opertoar   ()?true:false
+    // if() else
+    // truthy falsy
+   const auth0 = authUser.user ? {user:authUser.user}: formatErrors(authUser);
+   return auth0
+
 }
+ 
+const formatErrors = function(user){
+  let passwordWarning = ""
+  let emailWarning = ""
 
-authenticate({email:"user@gmail.com", password:"1234"})
+  if(user.validPassword === false){passwordWarning= `password doesn't seem to be correct`}
+  if(user.validEmail === false){ emailWarning= `email doesn't seem to be correct`}
+
+  return {user:null, emailWarning, passwordWarning}
+}
