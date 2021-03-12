@@ -45,6 +45,7 @@
     "department": "sales",
     "age": 29,
     "salary": 66109,
+    "role":"supervisor",
     "vacation": 24
   },
   {
