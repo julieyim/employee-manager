@@ -37,9 +37,7 @@ exports.authenticate = (credential)=>{
 
    }, {validEmail:false, validPassword:false, user:null})
 
-    // ternary opertoar   ()?true:false
-    // if() else
-    // truthy falsy
+     
    const auth0 = authUser.user ? {user:authUser.user}: formatErrors(authUser);
    return auth0
 

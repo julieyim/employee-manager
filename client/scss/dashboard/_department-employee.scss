@@ -1,0 +1,58 @@
+
+.employees{
+    img{
+        width:100px;
+    }
+    ul{
+        width:720px;
+        display:flex;
+        align-items: center;
+        gap:1rem;
+        box-shadow:   0 0 2px 1px rgba(175, 173, 173, 0.15);
+        background-color: #fff;
+    }
+   
+    label{
+        font-size: 11px;
+        color:#7f8687;
+        margin-left: 0.3rem;
+        padding-bottom: 0.3rem;
+    }
+    input{
+       width: 100%;
+       color:#0c343d;
+       border-radius: 4px;
+        padding:0.5rem;
+        border:none;
+        font-size:13px;
+        outline: none;
+        background-color: #f5fafb;;
+        box-shadow: 0 0 2px 0 rgb(185, 185, 185);
+    }
+
+    li:nth-child(4) input{
+        width: 75px;
+    }
+    
+    li:nth-child(5) input{
+        width: 75px;
+    }
+    
+}
+
+.employee{
+    margin: 0 0 1rem;
+}
+.controls{
+    display:flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-right: 1.5rem;
+  img{
+      opacity: 0.5;
+      width: 1.125rem;
+      margin-right: 0.25rem;
+  }
+}
+
+ 

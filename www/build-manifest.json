@@ -1,0 +1,253 @@
+{
+  "inputs": {
+    "css/styles.css": {
+      "bytes": 8604,
+      "imports": []
+    },
+    "js/dashboard/api/index.js": {
+      "bytes": 522,
+      "imports": []
+    },
+    "js/utils/dataFetcher.js": {
+      "bytes": 887,
+      "imports": []
+    },
+    "js/dashboard/events/EventManager.js": {
+      "bytes": 1512,
+      "imports": [
+        {
+          "path": "js/dashboard/api/index.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "js/utils/dataFetcher.js",
+          "kind": "import-statement"
+        }
+      ]
+    },
+    "js/dashboard/sidebar/sideBarTemplates.js": {
+      "bytes": 212,
+      "imports": []
+    },
+    "js/utils/renderToElement.js": {
+      "bytes": 157,
+      "imports": []
+    },
+    "js/dashboard/sidebar/sideBarOptions.js": {
+      "bytes": 238,
+      "imports": [
+        {
+          "path": "js/dashboard/sidebar/sideBarTemplates.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "js/utils/renderToElement.js",
+          "kind": "import-statement"
+        }
+      ]
+    },
+    "_snowpack/pkg/ejs.js": {
+      "bytes": 37787,
+      "imports": []
+    },
+    "js/utils/renderTemplate.js": {
+      "bytes": 163,
+      "imports": [
+        {
+          "path": "_snowpack/pkg/ejs.js",
+          "kind": "import-statement"
+        }
+      ]
+    },
+    "js/dashboard/sidebar/sideBarOption.js": {
+      "bytes": 750,
+      "imports": [
+        {
+          "path": "js/dashboard/sidebar/sideBarTemplates.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "js/utils/renderToElement.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "js/utils/renderTemplate.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "js/dashboard/events/EventManager.js",
+          "kind": "import-statement"
+        }
+      ]
+    },
+    "js/dashboard/sidebar/index.js": {
+      "bytes": 512,
+      "imports": [
+        {
+          "path": "js/dashboard/sidebar/sideBarOptions.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "js/dashboard/sidebar/sideBarOption.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "js/dashboard/sidebar/sideBarOption.js",
+          "kind": "import-statement"
+        }
+      ]
+    },
+    "js/dashboard/widgets/manager/managerTemplates.js": {
+      "bytes": 494,
+      "imports": []
+    },
+    "js/dashboard/widgets/manager/index.js": {
+      "bytes": 657,
+      "imports": [
+        {
+          "path": "js/dashboard/widgets/manager/managerTemplates.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "js/utils/renderTemplate.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "js/utils/renderToElement.js",
+          "kind": "import-statement"
+        }
+      ]
+    },
+    "js/dashboard/widgets/employee/employeeTemplates.js": {
+      "bytes": 958,
+      "imports": []
+    },
+    "js/dashboard/widgets/employee/index.js": {
+      "bytes": 1786,
+      "imports": [
+        {
+          "path": "js/utils/renderTemplate.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "js/utils/renderToElement.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "js/dashboard/widgets/employee/employeeTemplates.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "js/dashboard/events/EventManager.js",
+          "kind": "import-statement"
+        }
+      ]
+    },
+    "js/dashboard/display-panel/index.js": {
+      "bytes": 968,
+      "imports": [
+        {
+          "path": "js/dashboard/widgets/manager/index.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "js/dashboard/widgets/employee/index.js",
+          "kind": "import-statement"
+        }
+      ]
+    },
+    "js/dashboard/index.js": {
+      "bytes": 771,
+      "imports": [
+        {
+          "path": "js/dashboard/api/index.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "js/utils/dataFetcher.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "js/dashboard/events/EventManager.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "js/dashboard/sidebar/index.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "js/dashboard/display-panel/index.js",
+          "kind": "import-statement"
+        }
+      ]
+    }
+  },
+  "outputs": {
+    "../~~bundle~~/css/styles.css": {
+      "imports": [],
+      "entryPoint": "css/styles.css",
+      "inputs": {
+        "css/styles.css": {
+          "bytesInOutput": 6451
+        }
+      },
+      "bytes": 6452
+    },
+    "../~~bundle~~/js/dashboard/index.js": {
+      "imports": [],
+      "exports": [],
+      "entryPoint": "js/dashboard/index.js",
+      "inputs": {
+        "js/dashboard/api/index.js": {
+          "bytesInOutput": 286
+        },
+        "js/utils/dataFetcher.js": {
+          "bytesInOutput": 361
+        },
+        "js/dashboard/events/EventManager.js": {
+          "bytesInOutput": 674
+        },
+        "js/dashboard/sidebar/sideBarTemplates.js": {
+          "bytesInOutput": 124
+        },
+        "js/utils/renderToElement.js": {
+          "bytesInOutput": 100
+        },
+        "js/dashboard/sidebar/sideBarOptions.js": {
+          "bytesInOutput": 36
+        },
+        "_snowpack/pkg/ejs.js": {
+          "bytesInOutput": 12949
+        },
+        "js/utils/renderTemplate.js": {
+          "bytesInOutput": 55
+        },
+        "js/dashboard/sidebar/sideBarOption.js": {
+          "bytesInOutput": 253
+        },
+        "js/dashboard/sidebar/index.js": {
+          "bytesInOutput": 152
+        },
+        "js/dashboard/widgets/manager/managerTemplates.js": {
+          "bytesInOutput": 413
+        },
+        "js/dashboard/widgets/manager/index.js": {
+          "bytesInOutput": 180
+        },
+        "js/dashboard/widgets/employee/employeeTemplates.js": {
+          "bytesInOutput": 855
+        },
+        "js/dashboard/widgets/employee/index.js": {
+          "bytesInOutput": 861
+        },
+        "js/dashboard/display-panel/index.js": {
+          "bytesInOutput": 295
+        },
+        "js/dashboard/index.js": {
+          "bytesInOutput": 263
+        }
+      },
+      "bytes": 18147
+    }
+  }
+}
